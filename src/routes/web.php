@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\TopController;
+use App\Http\Controllers\User\PostController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,3 +26,4 @@ Route::get('/dashboard', function () {
 require __DIR__ . '/auth.php';
 
 Route::get('/', [TopController::class, 'top'])->name('top');
+Route::get('/user/{id}/index', [PostController::class, 'index'])->name('user.index');
