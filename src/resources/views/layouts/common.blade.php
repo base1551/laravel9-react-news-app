@@ -25,9 +25,20 @@
 </head>
 <body>
 <div>
-    <main class="w-full">
-        @yield('content')
-    </main>
+    <div>
+        @yield('header')
+    </div>
+    <div class="flex">
+        <div class="w-1/6">
+            @yield('sidebar')
+        </div>
+        <main class="w-full">
+            @yield('content')
+        </main>
+    </div>
+    <div>
+        @yield('footer')
+    </div>
 </div>
 </body>
 </html>
