@@ -14,6 +14,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        //db:seederコマンドで一括実行するファイルを記述
+        $this->call([
+            CategorySeeder::class,
+            PostSeeder::class,
+        ]);
         // \App\Models\User::factory(10)->create();
 
         // \App\Models\User::factory()->create([
