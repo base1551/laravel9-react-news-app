@@ -1245,6 +1245,9 @@ select {
 .pt-7 {
   padding-top: 1.75rem;
 }
+.pt-3 {
+  padding-top: 0.75rem;
+}
 .text-left {
   text-align: left;
 }
