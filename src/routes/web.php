@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\TopController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,12 +14,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/test', function () {
+    return view('test');
 });
 
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
+
+Route::get('/', [TopController::class, 'top'])->name('top');
