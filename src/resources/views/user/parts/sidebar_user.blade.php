@@ -122,9 +122,13 @@
                                 d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"/>
                         </svg>
                     </span>
-                        <span class="mx-2 text-md font-normal">
-                        ログアウト
-                    </span>
+                        <form action="{{route('logout')}}" method="post">
+                            @csrf
+                            <button
+                                class="inline-flex text-white items-center bg-red-500 border-0 py-1 px-3 mx-2 focus:outline-none hover:bg-red-400 rounded text-base mt-4 md:mt-0">
+                                ログアウト
+                            </button>
+                        </form>
                     </a>
                 </div>
             </nav>
